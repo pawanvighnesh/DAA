@@ -1,0 +1,17 @@
+# Array with 7 elements
+arr = [12, 25, 7, 40, 18, 33, 50]
+
+# Fixed key to search
+key = 18
+
+# Linear Search
+found = False
+
+for i in range(len(arr)):
+    if arr[i] == key:
+        print(f"Element {key} found at index {i}")
+        found = True
+        break
+
+if not found:
+    print(f"Element {key} not found")
