@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linear Search in HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 420px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #0f766e;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Linear Search</h2>
+    <p>Array: [12, 25, 7, 40, 18, 33, 50]</p>
+    <p>Searching for key: 18</p>
+    <button onclick="linearSearch()">Find Element</button>
+    <p id="result">Result will appear here.</p>
+  </div>
+
+  <script>
+    function linearSearch() {
+      const arr = [12, 25, 7, 40, 18, 33, 50];
+      const key = 18;
+      let found = false;
+      let result = document.getElementById("result");
+
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === key) {
+          result.textContent = `Element ${key} found at index ${i}`;
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
+        result.textContent = `Element ${key} not found`;
+      }
+    }
+  </script>
+</body>
+</html>
